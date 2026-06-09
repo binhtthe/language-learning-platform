@@ -1,0 +1,23 @@
+# Angular
+frontend/language-learning-web/node_modules/
+frontend/language-learning-web/.angular/
+frontend/language-learning-web/dist/
+
+# .NET
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+
+# Logs
+*.log
+
+# Environment
+.env
+
+# User files
+*.user
+
+# VS Code
+.vscode/
