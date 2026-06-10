@@ -1,7 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddDbContext<LanguageLearning.DBContext.ApplicationDBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("LanguageLearning") ?? throw new InvalidOperationException("Connection string 'LanguageLearning' not found.")));
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
